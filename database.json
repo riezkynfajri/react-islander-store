@@ -91,6 +91,11 @@
       "name": "Zoro",
       "type": "VIP",
       "id": 9
+    },
+    {
+      "name": "John",
+      "type": "VIP",
+      "id": 10
     }
   ],
   "Transaction": [

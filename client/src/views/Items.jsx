@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faShirt, faHatCowboy } from "@fortawesome/free-solid-svg-icons"
 import { useSelector, useDispatch } from "react-redux"

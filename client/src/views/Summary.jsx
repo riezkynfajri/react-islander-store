@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTrophy, faDumpster, faChartLine } from "@fortawesome/free-solid-svg-icons"
+import {
+  faTrophy,
+  faDumpster,
+  faChartLine,
+  faShirt,
+  faHatWizard,
+  faDollarSign,
+} from "@fortawesome/free-solid-svg-icons"
 import { fetchBuyers } from "../store/actions/BuyerActions"
 import { fetchItems } from "../store/actions/ItemActions"
 import { fetchTransactions } from "../store/actions/TransactionActions"
@@ -116,20 +123,49 @@ export default function Summary() {
               </div>
             </div>
           </div>
-          <h2 className="text-center text-lg font-semibold">Revenue Per Category</h2>
-          <div className="mx-4 flex text-center flex-col border-sky-600 border-2 py-2 rounded-lg">
-            <h3>Hats</h3>
-            <p>{toRupiah(hatRevenue)}</p>
-            <h3>Shirts</h3>
-            <p>{toRupiah(shirtRevenue)}</p>
-            <h3>Shorts</h3>
-            <p>{toRupiah(shortRevenue)}</p>
-            <h2 className="text-center text-lg font-semibold">Total</h2>
-            <p className="text-center text-lg">{toRupiah(totalRevenue)}</p>
-            <p className="text-end mr-12 text-sm text-zinc-400">
-              *Assuming all transactions are with regular customers
-            </p>
+          <h2 className="text-center text-xl text-white my-8 font-semibold">
+            Revenue Per Category
+          </h2>
+          <div className="mx-4 flex space-x-4 flex-wrap text-center justify-center">
+            <div className="flex items-center h-16 bg-white rounded-lg shadow-lg">
+              <FontAwesomeIcon icon={faHatWizard} className="text-indigo-400 text-3xl mx-4" />
+              <div className="flex flex-col text-center mr-4">
+                <h3>Hats</h3>
+                <p>{toRupiah(hatRevenue)}</p>
+              </div>
+            </div>
+            <div className="flex items-center h-16 bg-white rounded-lg shadow-lg">
+              <FontAwesomeIcon icon={faShirt} className="text-sky-400 text-3xl mx-4" />
+              <div className="flex flex-col text-center mr-4">
+                <h3>Shirts</h3>
+                <p>{toRupiah(shirtRevenue)}</p>
+              </div>
+            </div>
+            <div className="flex items-center h-16 bg-white rounded-lg shadow-lg">
+              <img
+                src={require("../assets/shorts.png")}
+                className="w-10 h-10 mx-4 rounded-full bg-emerald-400"
+                alt="logo"
+              />
+              <div className="flex flex-col text-center mr-4">
+                <h3>Shorts</h3>
+                <p>{toRupiah(shortRevenue)}</p>
+              </div>
+            </div>
+            <div className="flex items-center h-16 bg-white rounded-lg shadow-lg">
+              <FontAwesomeIcon
+                icon={faDollarSign}
+                className="text-amber-400 bg-yellow-200 w-12 h-12 rounded-full mx-4"
+              />
+              <div className="flex flex-col text-center mr-4">
+                <h3>Total</h3>
+                <p>{toRupiah(totalRevenue)}</p>
+              </div>
+            </div>
           </div>
+          <p className="text-center mt-4 text-sm text-zinc-300">
+            *Assuming all transactions are with regular customers
+          </p>
         </div>
       )}
     </div>
