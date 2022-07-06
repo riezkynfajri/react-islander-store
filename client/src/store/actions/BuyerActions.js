@@ -17,7 +17,6 @@ export function fetchBuyers() {
 
 export function addBuyer(input) {
   return (dispatch) => {
-    console.log(input)
     return fetch("http://localhost:3000/Buyers", {
       method: "POST",
       headers: {

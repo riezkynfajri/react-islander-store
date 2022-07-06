@@ -1,6 +1,7 @@
 {
   "Items": [
     {
+      "id": 1,
       "name": "oval hat",
       "type": "hats",
       "prices": [
@@ -15,6 +16,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "square hat",
       "type": "hats",
       "prices": [
@@ -33,6 +35,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "magic shirt",
       "type": "tops",
       "prices": [
@@ -92,26 +95,31 @@
   ],
   "Transaction": [
     {
+      "id": 1,
       "item": "magic shirt",
       "qty": 1,
       "buyer": "Ani"
     },
     {
+      "id": 2,
       "item": "square hat",
       "qty": 2,
       "buyer": "Budi"
     },
     {
+      "id": 3,
       "item": "magic shirt",
       "qty": 1,
       "buyer": "Ani"
     },
     {
+      "id": 4,
       "item": "oval hat",
       "qty": 1,
       "buyer": "Ani"
     },
     {
+      "id": 5,
       "item": "square hat",
       "qty": 100,
       "buyer": "Dipta"

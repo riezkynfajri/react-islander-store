@@ -6,6 +6,7 @@ import Swal from "sweetalert2"
 const Buyers = () => {
   const dispatch = useDispatch()
   const buyers = useSelector((state) => state.buyers)
+
   const [input, setInput] = useState({
     name: "",
     type: "",
@@ -20,7 +21,7 @@ const Buyers = () => {
     setLocalBuyers(buyers)
   }, [buyers])
 
-  const inputChange = (e) => {
+  function inputChange(e) {
     const { value, name } = e.target
     setInput({
       ...input,
@@ -61,7 +62,7 @@ const Buyers = () => {
     }
   }
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-[85vw]">
       <form
         onSubmit={handleSubmit}
         className="text-zinc-600 flex align-middle bg-white w-auto h-16 items-center space-x-4"
@@ -102,16 +103,16 @@ const Buyers = () => {
               >
                 <h2>{buyer.name}</h2>
                 {buyer.type === "regular" && (
-                  <h2 className="pt-[0.5px] pb-1 px-2 bg-zinc-400 rounded-lg text-zinc-100 bg-opacity-70 shadow-lg">
+                  <h2 className="pt-[0.5px] pb-1 px-2 bg-zinc-400 rounded-lg text-zinc-100 bg-opacity-70 shadow-lg ">
                     {buyer.type}
                   </h2>
                 )}
-                {buyer.type == "VIP" && (
+                {buyer.type === "VIP" && (
                   <h2 className="pt-[0.5px] pb-1 px-2 bg-yellow-400 rounded-lg text-yellow-100 bg-opacity-90 shadow-lg">
                     {buyer.type}
                   </h2>
                 )}
-                {buyer.type == "wholesale" && (
+                {buyer.type === "wholesale" && (
                   <h2 className="pt-[0.5px] pb-1 px-2 bg-emerald-400 rounded-lg text-emerald-100 bg-opacity-90 shadow-lg">
                     {buyer.type}
                   </h2>
